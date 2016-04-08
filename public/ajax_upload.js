@@ -90,7 +90,7 @@
             }
 
             if(isCreateElement){
-                alert("支持");
+                console.log("支持");
             }else{
 
             }
