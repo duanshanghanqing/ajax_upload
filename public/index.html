@@ -208,6 +208,7 @@
     ajax_button.onclick=function(){
         var files = document.getElementById("ajax_myfile").files
         var  res = multiFileUpload({
+            url:"/upload3",
             files:files,//上传的文件
             uploaduStart:function(event){//开始上传
                 console.log('开始上传');

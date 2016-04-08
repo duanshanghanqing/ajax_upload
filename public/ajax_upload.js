@@ -1,5 +1,10 @@
 (function(){
     window.multiFileUpload = function (obj){
+        var url="";
+        if(obj.url !== "" && obj.url !==null && obj.url !==undefined){
+            url = obj.url;
+        }
+
         var files;
         if(obj.files !== "" && obj.files !==null && obj.files!==undefined && obj.files.length>0){
             files = obj.files;
@@ -59,7 +64,7 @@
             };
 
             // 发起ajax请求传送数据
-            xhr.open('POST', '/upload3', true);
+            xhr.open('POST',url , true);
             xhr.send(fd);//发送文件
         }
         fileUpload(i);
